@@ -1,191 +1,186 @@
-:root {
-    --negro: #111111;
-    --blanco: #FFFFFF;
-    --amarillo: #FFE37A;
-    --gris-azulado: #26343D;
-}
+/* Estilos sencillos y básicos para principiantes */
 
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: var(--blanco);
-    color: var(--negro);    
-    font-family: "Poppins", sans-serif;
-}
-
-.start {    
-    position: relative;
-    width: 100%;
-    height: 400px;
-}
-
-.img {
-    width: 100%;
-    height: 400px;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%);
-}
-
-.img img {
-    background-position: center;   
-    width: 100%;                 
-    height: 100vh;
-    object-fit: cover;
-}
-.text {    
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    z-index: 2;
-    display: flex;
-    flex-direction: column; /* Apila el título arriba y el contenido abajo */
-    color: #FFFFFF;
-    background-color: var(--gris-azulado);
-    opacity: 0.9;
-    width: 850px; /* Ancho ajustado para que todo encaje bien */
-    padding: 25px;
-    box-sizing: border-box;
-}
-
-/* Estilo para centrar el título arriba */
-.text > h2 {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-
-/* Contenedor en fila para la descripción y el logo */
-.cuerpo-text {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
-
-.descripcion {
-    width: 100%;
-    margin: 0;
-}
-
-.logo {
-    margin: 0;
-    flex-shrink: 0; /* Evita que el logo se deforme */
-}
-.seguridad {
-    background-color: var(--negro);
-    color: var(--blanco);
-    padding: 50px 30px;
-    text-align: center;
-}
-
-.seguridad h2 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 30px;
-    color: var(--amarillo);
-    margin-bottom: 10px;
-}
-
-.seguridad p {
-    font-size: 17px;
-}
-
-.beneficios {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px 30px;
-    background-color: var(--amarillo);
-}
-
-.beneficio {
-    width: 300px;
-    padding: 25px;
-    text-align: center;
-    background-color: #F3F4F2;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-}
-
-.beneficio p {
-    color: grey;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.formularios {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 50px 30px;
-}
-
-.boton {
-    width: 420px;
-    min-height: 110px;
-    border: none;
-    border-radius: 20px;
     padding: 20px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    text-align: left;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.usuario {
-    background-color: var(--amarillo);
-    color: var(--negro);
-}
-
-.administrador {
-    background-color: var(--gris-azulado);
-    color: var(--blanco);
-}
-
-.flecha {
-    margin-left: auto;
-    font-size: 30px;
-}
-
-.boton:hover {
-    transform: translateY(-5px);
-}
-
-.vip {
+    
+    /* Imagen de fondo de parqueaderos con un desvanecimiento (degradado oscuro) hacia abajo */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.85)), 
+                url('https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    /* Centrar todo en la pantalla */
     display: flex;
     justify-content: center;
-    padding: 0 30px 60px;
-}
-
-.boton-vip {
-    width: 400px;
-    padding: 20px 40px;
-    border-radius: 50px;
-    border: 5px solid var(--amarillo);
-    background-color: var(--negro);
-    color: var(--amarillo);
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 30px;
-    cursor: pointer;
-    transition: 0.3s;
+    min-height: 100vh;
 }
 
-.boton-vip:hover {
-    background-color: var(--amarillo);
-    color: var(--negro);
+/* Caja blanca que contiene el formulario */
+.caja-formulario {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-footer {
+h1 {
     text-align: center;
-    padding: 25px;
-    background-color: var(--negro);
-    color: var(--blanco);
-    font-size: 13px;
+    color: #202528;
+    margin-top: 0;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #202528;
+    font-size: 14px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Estilo simple si un campo obligatorio se deja vacío y se intenta enviar */
+input:invalid, select:invalid {
+    border-color: #ff4757;
+}
+
+/* Botón de guardar */
+.boton-guardar {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #ffc928;
+    color: #202528;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-guardar:hover {
+    background-color: #e0b400;
+}
+
+/* Botón de salida para regresar al inicio */
+.boton-salida {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #202528;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.boton-salida:hover {
+    background-color: #33393d;
+}
+/* --- ESTILOS PARA EL MENÚ DE HAMBURGUESA BÁSICO --- */
+
+.menu-navegacion {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+/* Ocultar la casilla de verificación (checkbox) */
+.menu-toggle {
+    display: none;
+}
+
+/* Diseño del botón que dice "Menú" */
+.menu-icon {
+    background-color: #ffc928;
+    color: #202528;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+}
+
+.menu-icon:hover {
+    background-color: #e0b400;
+}
+
+/* La lista de enlaces del menú que aparece al hacer clic */
+.menu-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    overflow: hidden;
+    width: 200px;
+}
+
+.menu-links a {
+    padding: 12px;
+    color: #202528;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu-links a:hover {
+    background-color: #f4f4f4;
+    color: #ffc928;
+}
+
+/* Cuando se presiona el botón, se despliega el menú usando el selector ":checked" */
+.menu-toggle:checked ~ .menu-links {
+    display: flex;
+}
+/* --- MENSAJE DE ERROR FLOTANTE EN EL MEDIO --- */
+.mensaje-error-flotante {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 71, 87, 0.95); /* Rojo con transparencia */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    text-align: center;
+}
+
+/* Magia de CSS puro: Cuando intentas enviar el formulario y hay campos requeridos vacíos, 
+   el navegador activa el estado inválido y muestra el mensaje flotante */
+form:user-invalid .mensaje-error-flotante,
+form:invalid:active ~ .mensaje-error-flotante {
+    display: block;
 }
