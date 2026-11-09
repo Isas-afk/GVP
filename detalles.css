@@ -11,10 +11,10 @@ body {
 }
 .header {
     position: relative;
+    padding: var(--spacing-16);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--spacing-16);
     gap: 10px;
     }
 
@@ -74,13 +74,6 @@ body {
     border-radius: 4px;
 } 
 
-/* CONTENEDOR EXT*/
-.pricing-container{
-    display: flex;
-    justify-content: center;
-    padding: 20px 10px;
-}
-
 /* Tarjeta oscura*/
 .pricing-card{
     background-color:var(--color-primary-black);
@@ -89,6 +82,12 @@ body {
     max-width: 850px;
     width: 100%;
     box-shadow: 0 10px 25px;
+}
+
+.pricing-container{
+    display: flex;
+    justify-content: center;
+    padding: auto;
 }
 
 .card-title{
@@ -109,13 +108,37 @@ body {
     padding: 20px;
     margin-bottom: 25px
 }
-
 /*separacion*/
 .plans-grid{
     display: flex;
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;   /* celular: en columna */
+}
+
+@media (min-width: 768px) {
+    .plans-grid {
+        flex-direction: row;  /* tablet y escritorio: en fila */
+    }
+}
+.plans-grid {
+    display: flex;
+    flex-direction: column; /* En celular se ven en columna */
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .plans-grid {
+        flex-direction: row; /* En tablet y PC se ven en fila */
+    }
+}
+
+.plan-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 /*tarjeta cada plan*/
@@ -126,7 +149,6 @@ body {
     flex: 1;
     min-width: 280px;
     position:relative;
-    display: flex;
     flex-direction: column;
     background-color: transparent;
 }
@@ -223,3 +245,90 @@ body {
     font-weight: bold;
 }
 
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: none; }
+  }
+
+  .plan-card {
+  animation: aparecer .6s ease backwards;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.plan-card:nth-child(2) { animation-delay: .15s; }
+.plan-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(255, 201, 40, .35);
+}
+/* etiquetas centradas*/
+@keyframes pulso {
+  0%   { box-shadow: 0 0 0 0 rgba(255, 201, 40, .7); }
+  70%  { box-shadow: 0 0 0 10px rgba(255, 201, 40, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 201, 40, 0); }
+}
+.badge {
+  transform: translateX(-50%);
+  animation: pulso 2s infinite;
+}
+
+/*botones y brillo*/
+.button {
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .55), transparent);
+  transform: skewX(-20deg);
+  transition: left .6s ease;
+}
+.button:hover::after { left: 130%; }
+.button:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0, 0, 0, .3); }
+.button:active { transform: scale(.97); }
+.button:focus-visible { outline: 3px solid var(--color-primary-light-yellow); outline-offset: 3px; }
+
+/*beneficios*/
+.plan-features li { transition: transform .2s ease; }
+.plan-features li:hover { transform: translateX(6px); }
+
+/* boton de regreso*/
+.boton-salida { position: relative; transition: background-color .25s ease; }
+.boton-salida::before {
+  content: "←";
+  position: absolute;
+  left: 16px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+.boton-salida:hover::before { opacity: 1; transform: translateX(0); }
+
+img { max-width: 100%; height: auto; }
+
+/*media*/
+@media (max-width: 768px) {
+  .plan-card:hover { transform: none; }
+  .card-title { font-size: 20px; }
+  .inner-card { padding: 12px; }
+}
+
+@media (max-width: 480px) {
+  .plan-title { font-size: 16px; }
+  .plan-price { font-size: 13px; }
+  .plan-features { margin: 15px; font-size: 12px; }
+  .button { font-size: 12px; padding: 10px 12px; }
+  .header__logo { width: 70px; top: 10px; right: 10px; }
+}
+
+@media (hover: none) {
+  .plan-card:hover, .button:hover { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
