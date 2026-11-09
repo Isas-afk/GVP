@@ -1,0 +1,136 @@
+/* Estilos generales y colores de marca: Amarillo, Negro y Gris */
+:root {
+    --color-negro: #121212;
+    --color-gris-oscuro: #2b2b2b;
+    --color-gris-claro: #f4f4f4;
+    --color-amarillo: #ffcc00;
+    --color-amarillo-hover: #e6b800;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-gris-claro);
+    color: var(--color-negro);
+}
+
+/* Encabezado */
+header {
+    background-color: var(--color-negro);
+    color: var(--color-amarillo);
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 5px 0 0;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* Contenedor principal con FLEXBOX */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--color-negro);
+}
+
+.menu-parqueaderos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Tarjetas individuales de los parqueaderos (también usan flex) */
+.card {
+    background-color: #ffffff;
+    border: 2px solid var(--color-gris-oscuro);
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--color-negro);
+    border-bottom: 2px solid var(--color-amarillo);
+    padding-bottom: 8px;
+}
+
+.espacios {
+    font-weight: bold;
+    color: #008000;
+}
+
+/* Estilos de los botones y HOVER */
+.btn-seleccionar {
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.btn-seleccionar:hover {
+    background-color: var(--color-amarillo-hover);
+    transform: scale(1.02);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--color-negro);
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* MEDIA QUERY: Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    
+    .menu-parqueaderos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
