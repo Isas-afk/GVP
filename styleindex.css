@@ -79,6 +79,15 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+@media (max-width: 768px) {
+    .text {
+        left: 10px;
+        right: 10px;       /* Margen a la derecha en móviles */
+        width: auto;       /* Se adapta al espacio entre los márgenes */
+        padding: 15px;     /* Padding más cómodo para celular */
+    }
+}
+
 .text:hover {
     transform: translateY(-52%);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
@@ -194,8 +203,8 @@ body {
 }
 
 .usuario {
-    background-color: var(--amarillo);
-    color: var(--negro);
+    background-color: var(--gris-azulado);
+    color: var(--blanco);
 }
 
 .administrador {
