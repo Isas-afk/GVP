@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GVP - Registro de Vehículo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="formularios.css">
+</head>
+<body>
+
+    <div class="tarjeta-formulario">
+        <div class="encabezado-form">
+            <div class="icono-principal">
+                <i class="fa-solid fa-car"></i>
+            </div>
+            <div class="titulos-form">
+                <h1>Información del vehículo</h1>
+                <p>Completa los datos de tu vehículo. Esta información nos ayuda a brindarte un mejor control y mayor seguridad.</p>
+            </div>
+        </div>
+
+        <form action="#" method="POST">
+            <div class="grid-campos">
+                <!-- Marca -->
+                <div class="grupo-campo">
+                    <div class="icono-campo"><i class="fa-solid fa-car-side"></i></div>
+                    <div class="control-input">
+                        <label for="marca">Marca</label>
+                        <select id="marca" name="marca" required>
+                            <option value="" disabled selected>Selecciona la marca</option>
+                            <option value="chevrolet">Chevrolet</option>
+                            <option value="renault">Renault</option>
+                            <option value="mazda">Mazda</option>
+                            <option value="kia">Kia</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="otra">Otra</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Modelo -->
+                <div class="grupo-campo">
+                    <div class="icono-campo"><i class="fa-solid fa-car"></i></div>
+                    <div class="control-input">
+                        <label for="modelo">Modelo</label>
+                        <select id="modelo" name="modelo" required>
+                            <option value="" disabled selected>Selecciona el modelo</option>
+                            <option value="sedan">Sedán / Automóvil</option>
+                            <option value="suv">Camioneta / SUV</option>
+                            <option value="hatchback">Hatchback</option>
+                            <option value="moto">Motocicleta</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Placa -->
+                <div class="grupo-campo">
+                    <div class="icono-campo"><i class="fa-solid fa-id-card"></i></div>
+                    <div class="control-input">
+                        <label for="placa">Placa</label>
+                        <input type="text" id="placa" name="placa" placeholder="Ejemplo: ABC-123" required>
+                    </div>
+                </div>
+
+                <!-- Color -->
+                <div class="grupo-campo">
+                    <div class="icono-campo"><i class="fa-solid fa-droplet"></i></div>
+                    <div class="control-input">
+                        <label for="color">Color</label>
+                        <select id="color" name="color" required>
+                            <option value="" disabled selected>Selecciona el color</option>
+                            <option value="blanco">Blanco</option>
+                            <option value="negro">Negro</option>
+                            <option value="gris">Gris / Plata</option>
+                            <option value="rojo">Rojo</option>
+                            <option value="azul">Azul</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Tipo de combustible -->
+                <div class="grupo-campo">
+                    <div class="icono-campo"><i class="fa-solid fa-gas-pump"></i></div>
+                    <div class="control-input">
+                        <label for="combustible">Tipo de combustible</label>
+                        <select id="combustible" name="combustible" required>
+                            <option value="" disabled selected>Selecciona el combustible</option>
+                            <option value="gasolina">Gasolina</option>
+                            <option value="diesel">Diésel</option>
+                            <option value="electrico">Eléctrico</option>
+                            <option value="hibrido">Híbrido</option>
+                            <option value="gas">Gas Natural (GNV)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Tipo de vehículo -->
+                <div class="grupo-campo">
+                    <div class="icono-campo"><i class="fa-solid fa-truck-pickup"></i></div>
+                    <div class="control-input">
+                        <label for="tipo_vehiculo">Tipo de vehículo</label>
+                        <select id="tipo_vehiculo" name="tipo_vehiculo" required>
+                            <option value="" disabled selected>Selecciona el tipo de vehículo</option>
+                            <option value="particular">Particular</option>
+                            <option value="publico">Servicio Público</option>
+                            <option value="carga">Carga / Utilitario</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Número de serie (VIN) -->
+                <div class="grupo-campo">
+                    <div class="icono-campo"><i class="fa-solid fa-file-lines"></i></div>
+                    <div class="control-input">
+                        <label for="vin">Número de serie (VIN)</label>
+                        <input type="text" id="vin" name="vin" placeholder="Ejemplo: 1HGCM82633A004352">
+                    </div>
+                </div>
+
+                <!-- Año del vehículo -->
+                <div class="grupo-campo">
+                    <div class="icono-campo"><i class="fa-solid fa-calendar-days"></i></div>
+                    <div class="control-input">
+                        <label for="anio">Año del vehículo</label>
+                        <input type="number" id="anio" name="anio" min="1950" max="2027" placeholder="Ejemplo: 2020" required>
+                    </div>
+                </div>
+
+                <!-- Observaciones -->
+                <div class="grupo-campo campo-completo">
+                    <div class="icono-campo"><i class="fa-solid fa-clipboard-list"></i></div>
+                    <div class="control-input">
+                        <label for="observaciones">Observaciones (opcional)</label>
+                        <textarea id="observaciones" name="observaciones" placeholder="Puedes agregar información adicional sobre tu vehículo..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="acciones-form">
+                <button type="submit" class="btn-guardar">
+                    <i class="fa-solid fa-floppy-disk"></i> Guardar información <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <a href="index.html" class="btn-volver">
+                    <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+                </a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
