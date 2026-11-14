@@ -80,11 +80,48 @@ body {
 }
 
 @media (max-width: 768px) {
+    /* 1. Ajustar el contenedor principal de la imagen para celulares */
+    .start, .img {
+        height: 380px; 
+    }
+
+    .img img {
+        height: 100%; /* Evita problemas con las barras de los navegadores móviles */
+    }
+
+    /* 2. Adaptar la caja de texto flotante */
     .text {
         left: 10px;
-        right: 10px;       /* Margen a la derecha en móviles */
-        width: auto;       /* Se adapta al espacio entre los márgenes */
-        padding: 15px;     /* Padding más cómodo para celular */
+        right: 10px;       
+        width: auto;       
+        padding: 18px;     
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* 3. ¡CLAVE! Apilar el contenido interno (Logo y Descripción) en columna */
+    .cuerpo-text {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    /* 4. Reducir tamaños de texto para pantallas pequeñas */
+    .text > h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .descripcion {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    /* 5. Asegurar un tamaño cómodo para el logo en móviles */
+    .logo img {
+        width: 75px;
+        height: 75px;
     }
 }
 
