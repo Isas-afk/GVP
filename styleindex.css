@@ -185,7 +185,7 @@ body {
     font-size: 17px;
 }
 
-.beneficios {
+/* .beneficios {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -199,6 +199,28 @@ body {
     text-align: center;
     background-color: #F3F4F2;
     border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+.beneficios {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;          /* CLAVE: Permite que las tarjetas bajen a la siguiente línea en pantallas pequeñas */
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: var(--amarillo);
+    box-sizing: border-box;
+}
+
+.beneficio {
+    width: 100%;              /* En celulares ocupará todo el ancho disponible */
+    max-width: 320px;         /* Límite de ancho para que en PC se vean ordenadas */
+    padding: 25px;
+    text-align: center;
+    background-color: #F3F4F2;
+    border-radius: 15px;
+    box-sizing: border-box;   /* Evita que el padding expanda el ancho de la tarjeta */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
