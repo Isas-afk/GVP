@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GVP - Registro de Usuario</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="formularios.css">
+</head>
+<body>
+
+    <div class="tarjeta-formulario">
+        <div class="encabezado-form">
+            <div class="icono-principal">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+            <div class="titulos-form">
+                <h1>Registro de usuario</h1>
+                <p>Ingresa tus datos personales para gestionar tus reservas y visibilidad de parqueaderos.</p>
+            </div>
+        </div>
+
+        <form action="#" method="POST">
+            <div class="grid-campos">
+                <!-- Nombre -->
+                <div class="grupo-campo">
+                    <div class="icono-campo"><i class="fa-solid fa-user"></i></div>
+                    <div class="control-input">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ejemplo: Andrés" required>
+                    </div>
+                </div>
+
+                <!-- Apellidos -->
+                <div class="grupo-campo">
+                    <div class="icono-campo"><i class="fa-solid fa-user-tag"></i></div>
+                    <div class="control-input">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Ejemplo: Ramírez Montoya" required>
+                    </div>
+                </div>
+
+                <!-- Correo -->
+                <div class="grupo-campo">
+                    <div class="icono-campo"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="control-input">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="Ejemplo: usuario@correo.com" required>
+                    </div>
+                </div>
+
+                <!-- Celular -->
+                <div class="grupo-campo">
+                    <div class="icono-campo"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <div class="control-input">
+                        <label for="celular">Celular</label>
+                        <input type="tel" id="celular" name="celular" placeholder="Ejemplo: 300 123 4567" required>
+                    </div>
+                </div>
+
+                <!-- Dirección -->
+                <div class="grupo-campo campo-completo">
+                    <div class="icono-campo"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="control-input">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Ejemplo: Calle 50 # 45 - 20" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="acciones-form">
+                <button type="submit" class="btn-guardar">
+                    <i class="fa-solid fa-floppy-disk"></i> Guardar usuario <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <a href="index.html" class="btn-volver">
+                    <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+                </a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

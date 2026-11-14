@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GVP - Registro de Parqueadero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="formularios.css">
+</head>
+<body>
+
+    <div class="tarjeta-formulario">
+        <div class="encabezado-form">
+            <div class="icono-principal">
+                <i class="fa-solid fa-square-parking"></i>
+            </div>
+            <div class="titulos-form">
+                <h1>Información del parqueadero</h1>
+                <p>Registra los datos del establecimiento para habilitar su monitoreo y visibilidad en el sistema.</p>
+            </div>
+        </div>
+
+        <form action="#" method="POST">
+            <div class="grid-campos">
+                <!-- Nombre del parqueadero -->
+                <div class="grupo-campo">
+                    <div class="icono-campo"><i class="fa-solid fa-building"></i></div>
+                    <div class="control-input">
+                        <label for="nombre_parqueadero">Nombre del parqueadero</label>
+                        <input type="text" id="nombre_parqueadero" name="nombre_parqueadero" placeholder="Ejemplo: Parqueadero Central" required>
+                    </div>
+                </div>
+
+                <!-- Nombre del propietario -->
+                <div class="grupo-campo">
+                    <div class="icono-campo"><i class="fa-solid fa-user-tie"></i></div>
+                    <div class="control-input">
+                        <label for="propietario">Nombre del propietario</label>
+                        <input type="text" id="propietario" name="propietario" placeholder="Ejemplo: Carlos Gómez" required>
+                    </div>
+                </div>
+
+                <!-- Dirección -->
+                <div class="grupo-campo campo-completo">
+                    <div class="icono-campo"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <div class="control-input">
+                        <label for="direccion_parqueadero">Dirección</label>
+                        <input type="text" id="direccion_parqueadero" name="direccion_parqueadero" placeholder="Ejemplo: Carrera 45 # 52 - 10, Centro" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="acciones-form">
+                <button type="submit" class="btn-guardar">
+                    <i class="fa-solid fa-floppy-disk"></i> Guardar parqueadero <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <a href="index.html" class="btn-volver">
+                    <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+                </a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
